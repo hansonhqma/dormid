@@ -53,7 +53,7 @@ class engine:
         pic = pic[max(0, f[1]-padding):min(h, f[3]+padding), max(0, f[0]-padding):min(w, f[2]+padding)]
         pic = cv.resize(pic, (100,125))
         return cv.cvtColor(pic, cv.COLOR_BGR2GRAY), True
-    
+
     def predict(self, a, b):
         if not type(a) == np.ndarray or not type(b) == np.ndarray:
             print("Input tensors need to be of type numpy.array")
